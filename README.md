@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About cclib
 ===========
 
@@ -22,8 +18,15 @@ platform-independent way.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/cclib-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/cclib-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2583&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cclib-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -119,5 +122,6 @@ Feedstock Maintainers
 
 * [@berquist](https://github.com/berquist/)
 * [@jaimergp](https://github.com/jaimergp/)
+* [@langner](https://github.com/langner/)
 * [@richardjgowers](https://github.com/richardjgowers/)
 
