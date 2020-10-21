@@ -1,5 +1,5 @@
 {% set name = "cclib" %}
-{% set version = "1.6.3" %}
+{% set version = "1.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0428aa8c29b7460c767a8b3b14c089ee83bbd6269a0af2a2164eafa962f1c2d4
+  sha256: 8b9581544746d41c335dfdaa678a577d7a123ea598c04cafc749d61e669da22d
 
 build:
   number: 0
