@@ -5,9 +5,13 @@ Home: http://cclib.github.io/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cclib-feedstock/blob/master/LICENSE.txt)
 
 Summary: Parsers and algorithms for computational chemistry logfiles
+
+Development: https://github.com/cclib/cclib
+
+Documentation: http://cclib.github.io
 
 cclib is a Python library that provides parsers for output files of
 computational chemistry packages. It also provides a platform for
