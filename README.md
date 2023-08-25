@@ -1,11 +1,11 @@
-About cclib
-===========
+About cclib-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cclib-feedstock/blob/main/LICENSE.txt)
 
 Home: http://cclib.github.io/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cclib-feedstock/blob/main/LICENSE.txt)
 
 Summary: Parsers and algorithms for computational chemistry logfiles
 
