@@ -1,5 +1,5 @@
 {% set name = "cclib" %}
-{% set version = "1.8" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 12b7a7ed8191f02fa12320dbdc830546ee1615e8b4737e3d766f34622abbd521
+  sha256: d10aa2352479fcdaa86cc32055a8ae7f98ce26523ea928944ab2256f0875d605
 
 build:
   number: 0
@@ -30,9 +30,14 @@ requirements:
     - packaging >=19.0
     - pandas
     - periodictable
-    - biopython
-    # - openbabel (optional, not yet available on conda-forge)
-    # - pyquante (optional, not yet available on conda-forge)
+    # all of the following are optional
+    # - ase >=3.2.1
+    # - biopython
+    # - openbabel
+    # - psi4
+    # - pyquante2 (not yet available on conda-forge)
+    # - pyscf
+    # - qc-iodata (not yet available on conda-forge)
 
 test:
   imports:
@@ -41,6 +46,12 @@ test:
     - ccframe --help
     - ccget --help
     - ccwrite --help
+    - python -c 'import cclib; print(cclib.__version__)'
+    - python -c 'from cclib.io import ccread; data = ccread("https://raw.githubusercontent.com/cclib/cclib-data/master/Gaussian/Gaussian16/water.log"); print(data.zpve)'
+  downstreams:
+    - morfeus-ml
+    # - quacc (doesn't have updated conda packages anymore)
+    # - rmg (not on conda-forge)
 
 about:
   home: http://cclib.github.io/
