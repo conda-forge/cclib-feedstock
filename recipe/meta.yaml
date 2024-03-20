@@ -30,9 +30,14 @@ requirements:
     - packaging >=19.0
     - pandas
     - periodictable
-    - biopython
-    - openbabel
-    # - pyquante (optional, not yet available on conda-forge)
+    # all of the following are optional
+    # - ase >=3.2.1
+    # - biopython
+    # - openbabel
+    # - psi4
+    # - pyquante2 (not yet available on conda-forge)
+    # - pyscf
+    # - qc-iodata (not yet available on conda-forge)
 
 test:
   imports:
