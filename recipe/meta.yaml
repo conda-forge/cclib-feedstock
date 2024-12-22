@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d10aa2352479fcdaa86cc32055a8ae7f98ce26523ea928944ab2256f0875d605
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
   entry_points:
@@ -21,10 +21,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy >=1.2.0
     - packaging >=19.0
@@ -40,6 +40,8 @@ requirements:
     # - qc-iodata (not yet available on conda-forge)
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cclib
   commands:
