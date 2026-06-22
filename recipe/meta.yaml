@@ -52,7 +52,7 @@ test:
     - python -c 'import cclib; print(cclib.__version__)'
     - python -c 'from cclib.io import ccread; data = ccread("https://raw.githubusercontent.com/cclib/cclib-data/master/Gaussian/Gaussian16/water.log"); print(data.zpve)'
   downstreams:
-    # - morfeus-ml (missing pkg_resources dependency)
+    - morfeus-ml
     - quacc
     # - rmg (not on conda-forge, located at https://anaconda.org/rmg/rmg but not updated)
 
